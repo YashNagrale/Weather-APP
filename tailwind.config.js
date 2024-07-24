@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        'wether-image': "url('/assets/wether-img.webp')",
+        'wether-image': "url('/Weather-APP/assets/wether-img.webp')",
       },
       dropShadow: {
         '3xl': '0 35px 35px #00000091',
