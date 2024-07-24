@@ -15,6 +15,7 @@ const updateWeatherData = (fetchedData) => {
   const windspeed = document.getElementById("windspeed");
   const conditiontext = document.getElementById("conditiontext");
   const tempC = document.getElementById("tempC");
+  const lastupdate = document.getElementById("lastupdate");
 
   // Extracting relevant data
   const location = fetchedData.location;
@@ -26,6 +27,7 @@ const updateWeatherData = (fetchedData) => {
   humidity.textContent = current.humidity + "%";
   windspeed.textContent = current.wind_kph + " Km/hr";
   conditiontext.textContent = current.condition.text;
+  lastupdate.textContent ='Last-update : '+ current.last_updated;
 
   const defaultCloud = document.getElementById("defaultCloud");
   const cloudyImage = document.getElementById("cloudyImage");
