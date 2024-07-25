@@ -10,6 +10,8 @@ const getDayString = (dayString) => {
 // Utility function to update the DOM with weather data
 const updateWeatherData = (fetchedData) => {
   const locationName = document.getElementById("locationname");
+  const regionName = document.getElementById("regionName");
+  const countryName = document.getElementById("countryName");
   const temperature = document.getElementById("temperature");
   const humidity = document.getElementById("humidity");
   const windspeed = document.getElementById("windspeed");
@@ -22,6 +24,8 @@ const updateWeatherData = (fetchedData) => {
   const current = fetchedData.current;
   
   locationName.textContent = location.name;
+  regionName.textContent = location.region;
+  countryName.textContent = location.country;
   temperature.textContent = current.temp_c + "°C";
   tempC.textContent = current.temp_c + "°C";
   humidity.textContent = current.humidity + "%";
@@ -109,7 +113,7 @@ const findBtn = async () => {
   }
 };
 
-// Update the day and cloud image based on the current date
+// Update the date and day
 (() => {
   const date = new Date();
   // Day script
